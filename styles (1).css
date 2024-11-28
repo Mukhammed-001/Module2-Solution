@@ -1,0 +1,67 @@
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcccb;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+/* Стили для рабочего стола */
+@media (min-width: 992px) {
+  .box {
+    float: left;
+    width: 31.33%; /* Три колонки */
+  }
+}
+
+/* Стили для планшета */
+@media (min-width: 768px) and (max-width: 991px) {
+  .box:nth-child(1),
+  .box:nth-child(2) {
+    float: left;
+    width: 48%; /* Две колонки */
+    margin-right: 2%;
+  }
+
+  .box:nth-child(2) {
+    margin-right: 0; /* Убираем отступ справа для второй коробки */
+  }
+
+  .box:nth-child(3) {
+    clear: both;
+    width: 100%;
+  }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 767px) {
+  .box {
+    width: 100%; /* Одна колонка */
+    float: none;
+  }
+}
